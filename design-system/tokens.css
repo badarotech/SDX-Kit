@@ -1,0 +1,43 @@
+/* Badaró — tokens como CSS custom properties. Extraído do Figma (biblioteca Foundation).
+   Marca, neutros âncora e tipografia são exatos; passos intermediários do ramp são
+   interpolados (ver meta em tokens.json). O protótipo importa ESTE arquivo. */
+:root {
+  /* marca (magenta) */
+  --color-brand-50:#ffddf0; --color-brand-100:#ffc0e3; --color-brand-200:#ff87c9;
+  --color-brand-300:#ff4eb0; --color-brand-400:#ff1596; --color-brand-500:#e00f83;
+  --color-brand-600:#b80a6b; --color-brand-700:#8f0653; --color-brand-900:#4d012b;
+
+  /* neutros (frios) */
+  --color-neutral-10:#ffffff; --color-neutral-50:#f5f6f8; --color-neutral-100:#e9ebef;
+  --color-neutral-200:#c8ccd6; --color-neutral-300:#aeb2bf; --color-neutral-400:#9499a7;
+  --color-neutral-500:#7a7f90; --color-neutral-600:#5d6271; --color-neutral-700:#3f4452;
+  --color-neutral-800:#2a2e3a; --color-neutral-900:#060606;
+  /* alias de compatibilidade (componentes antigos usavam neutral-0) */
+  --color-neutral-0:#ffffff;
+
+  --color-base-black:#000000; --color-base-white:#ffffff;
+  --color-success-500:#1d9e75; --color-success-600:#0f6e56;
+  --color-warning-500:#ba7517; --color-warning-600:#854f0b;
+  --color-danger-500:#e24b4a;  --color-danger-600:#a32d2d;
+
+  /* tipografia — Figtree */
+  --font-sans:Figtree,system-ui,sans-serif; --font-mono:'JetBrains Mono',ui-monospace,monospace;
+  --size-xs:12px; --size-sm:14px; --size-md:16px; --size-lg:18px;
+  --size-xl:24px; --size-2xl:32px; --size-3xl:40px; --size-4xl:64px;
+  --weight-regular:400; --weight-medium:500; --weight-semibold:600;
+  --lh-tight:1.1; --lh-snug:1.2; --lh-normal:1.4; --lh-relaxed:1.55;
+
+  /* espaço, raio, sombra */
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px;
+  --space-6:32px; --space-8:48px; --space-10:64px;
+  --radius-sm:6px; --radius-md:10px; --radius-lg:16px; --radius-pill:999px;
+  --shadow-sm:0 1px 2px rgba(6,6,6,.06); --shadow-md:0 4px 16px rgba(6,6,6,.10);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-neutral-10:#060606; --color-neutral-50:#12131a; --color-neutral-100:#1b1d26;
+    --color-neutral-200:#2a2e3a; --color-neutral-300:#3f4452; --color-neutral-400:#5d6271;
+    --color-neutral-500:#7a7f90; --color-neutral-600:#9499a7; --color-neutral-700:#c8ccd6;
+    --color-neutral-800:#e9ebef; --color-neutral-900:#ffffff; --color-neutral-0:#060606;
+  }
+}
