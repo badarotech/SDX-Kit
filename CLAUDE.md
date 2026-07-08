@@ -21,6 +21,9 @@ leia `constitution.md` — ele contém as regras inegociáveis (princípios HAX 
    `procedencia` (evidencia | desk | hipotese). Confiança nunca excede a das fontes;
    `alta` exige triangulação. Achado sem fonte é `hipotese`, nunca `evidencia`.
 
+8. **Estágio é derivado.** O estágio de uma jornada vem dos artefatos existentes e seus
+   `status`, nunca de um campo à mão. Use `/status` para computá-lo.
+
 ## Estrutura
 
 - `.claude/commands/` — os comandos (as fases do pipeline).
@@ -40,3 +43,14 @@ leia `constitution.md` — ele contém as regras inegociáveis (princípios HAX 
 - `SRC-xxx` … fonte de pesquisa catalogada (`knowledge/research/studies/<lote>/sources.md`)
 - `RES-xxx` … insight de pesquisa (cita `fontes: [SRC-xx]` e declara `procedencia`)
 - `PERSONA-xx` … persona · `PRIN-xx` … princípio · `DEF-xx` … definição · `ADR-xxx` … decisão de design
+
+## Estágio da jornada (derivado dos artefatos)
+O estágio de uma jornada NÃO é um campo editado à mão: ele é derivado dos artefatos existentes e
+de seus `status`. Regra (pare no primeiro que bater):
+- sem `outcome.md`: Não iniciada.
+- `outcome.md` + `needs.md`, sem `tasks.md`: Definição.
+- `tasks.md`, sem `design-spec.md`: Especificação pronta.
+- `design-spec.md` não aprovada: Design em revisão (gate humano).
+- `design-spec.md` aprovada, sem `prototype/`: Design aprovado.
+- `prototype/` com arquivos: Protótipo gerado.
+Use `/status` para computar o estágio de uma jornada (ou de todas) e ver o próximo passo.
