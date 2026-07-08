@@ -48,6 +48,13 @@ Relação com o pipeline: `/add-insight`, `/add-need` e `/add-task` são as vers
 material ou de artefatos anteriores; os `add-*` deixam você autorar um item por vez, por entrevista.
 Persona, princípio e glossário só existem na forma guiada.
 
+## Em qual estágio estou?
+
+O estágio de uma jornada é derivado dos artefatos que já existem (os arquivos são a fonte
+da verdade), não de um campo editado à mão. Rode `/status <jornada>` para ver o estágio
+atual, o que já foi feito, o próximo passo e eventuais bloqueios. Sem argumento, `/status`
+mostra um painel de todas as jornadas e um resumo do `knowledge/`.
+
 ## A unidade atômica: a jornada
 
 Todo trabalho vive dentro de `journeys/<slug>/`. Uma jornada tem **um** `outcome`
